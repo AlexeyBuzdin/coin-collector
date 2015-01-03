@@ -1,14 +1,15 @@
 package com.github.larchaon.coincollector.domain;
 
-import com.google.gson.annotations.SerializedName;
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
 
 import java.util.List;
 
-public class Nominal {
-    @SerializedName("title")
+public class Nominal extends Model {
+    @Column(name = "title")
     private String title;
-    @SerializedName("coins")
-    private List<Coin> coins;
+    @Column(name = "collectionFk")
+    private Long collectionFk;
 
     public String getTitle() {
         return title;
@@ -18,11 +19,15 @@ public class Nominal {
         this.title = title;
     }
 
-    public List<Coin> getCoins() {
-        return coins;
+    public Long getCollectionFk() {
+        return collectionFk;
     }
 
-    public void setCoins(List<Coin> coins) {
-        this.coins = coins;
+    public void setCollectionFk(Long collectionFk) {
+        this.collectionFk = collectionFk;
+    }
+
+    public List<Coin> getCoins() {
+        return getMany(Coin.class, "nominal");
     }
 }

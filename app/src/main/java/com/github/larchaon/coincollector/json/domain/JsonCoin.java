@@ -1,17 +1,15 @@
-package com.github.larchaon.coincollector.domain;
+package com.github.larchaon.coincollector.json.domain;
 
 import com.activeandroid.Model;
-import com.activeandroid.annotation.Column;
+import com.google.gson.annotations.SerializedName;
 
-public class Coin extends Model {
-    @Column(name = "year")
+public class JsonCoin extends Model {
+    @SerializedName("year")
     private String year;
-    @Column(name = "price")
+    @SerializedName("price")
     private String price;
-    @Column(name = "mint")
+    @SerializedName("mint")
     private String mint;
-    @Column(name = "nominalFk")
-    private Long nominalFk;
 
     public String getYear() {
         return year;
@@ -35,13 +33,5 @@ public class Coin extends Model {
 
     public void setMint(String mint) {
         this.mint = mint;
-    }
-
-    public Long getNominalFk() {
-        return nominalFk;
-    }
-
-    public void setNominalFk(Long nominalFk) {
-        this.nominalFk = nominalFk;
     }
 }
