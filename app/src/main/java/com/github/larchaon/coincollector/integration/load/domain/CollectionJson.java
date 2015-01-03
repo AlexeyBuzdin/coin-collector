@@ -1,14 +1,14 @@
-package com.github.larchaon.coincollector.json.domain;
+package com.github.larchaon.coincollector.integration.load.domain;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class JsonCollection {
+public class CollectionJson {
     @SerializedName("title")
     private String title;
     @SerializedName("nominal")
-    private List<JsonNominal> nominal;
+    private List<NominalJson> nominal;
 
     public String getTitle() {
         return title;
@@ -18,11 +18,11 @@ public class JsonCollection {
         this.title = title;
     }
 
-    public List<JsonNominal> getNominal() {
+    public List<NominalJson> getNominal() {
         return nominal;
     }
 
-    public void setNominal(List<JsonNominal> nominal) {
+    public void setNominal(List<NominalJson> nominal) {
         this.nominal = nominal;
     }
 }

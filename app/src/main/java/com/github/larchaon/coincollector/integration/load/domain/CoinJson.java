@@ -1,9 +1,9 @@
-package com.github.larchaon.coincollector.json.domain;
+package com.github.larchaon.coincollector.integration.load.domain;
 
 import com.activeandroid.Model;
 import com.google.gson.annotations.SerializedName;
 
-public class JsonCoin extends Model {
+public class CoinJson extends Model {
     @SerializedName("year")
     private String year;
     @SerializedName("price")
