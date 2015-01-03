@@ -1,7 +1,7 @@
 ### JSON example
     {
       "title": "USSR",
-      "nominals": [
+      "nominal": [
         {
           "title": "1 kopek",
           "coins":[
